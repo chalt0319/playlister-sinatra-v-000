@@ -6,8 +6,7 @@
   <%Artist.all.each do |artist|%>
   <p><input type="checkbox" name="artist_check" value="<%=artist.id%>"><%=artist.name%></p>
   <%end%>
-  <p>Or create a new Artist here:</p>
-  <p>Artist Name: <input type="text" name="artist"></p>
+  <p>Or create a new Artist here: <input type="text" name="artist"></p>
   <p>Song Genre: <input type="text" name="genre"></p>
   <p><input type="submit" id="submit" value="Create Song"></p>
 </form>
