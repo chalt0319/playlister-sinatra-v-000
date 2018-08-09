@@ -27,7 +27,9 @@ class SongsController < ApplicationController
       @genre = Genre.find_by(name: params[:genre])
     end
     @song.artist = @artist
-    @song.genre = @genre 
+    @song.genre = @genre
+    @song.save
+    erb :'/songs/show'
   end
 
 end
