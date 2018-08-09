@@ -56,7 +56,7 @@ class SongsController < ApplicationController
       else
         @genre = Genre.find_by(name: params[:genre])
       end
-      @song.genres = [] 
+      @song.genres = []
       @song.genres << @genre
     end
     @song.save
