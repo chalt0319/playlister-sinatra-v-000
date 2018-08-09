@@ -31,5 +31,5 @@ class SongsController < ApplicationController
     @song = Song.find_by_slug(params[:slug])
     erb :'/songs/show'
   end
-  
+
 end
