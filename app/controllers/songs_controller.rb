@@ -22,7 +22,7 @@ class SongsController < ApplicationController
       @genre = Genre.find_by(name: params[:genre])
     end
     @song.artist = @artist
-    @song.genre = @genre
+    @song.genres << @genre
     @song.save
     redirect '/songs/#{@song.slug}'
   end
