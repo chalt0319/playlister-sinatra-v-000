@@ -29,7 +29,7 @@ class SongsController < ApplicationController
     @song.artist = @artist
     @song.genre = @genre
     @song.save
-    erb :'/songs/show'
+    redirect '/songs/#{@song.slug}'
   end
 
 end
