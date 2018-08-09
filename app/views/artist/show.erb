@@ -3,7 +3,7 @@
 <h3>Songs:</h3>
 <%@artist.songs.each do |song|%>
 <ul>
-  <li><%=song.name%></li>
+  <li><a href="/songs/<%=@artist.song.slug%>"><%=song.name%></a></li>
 </ul>
 <%end%>
 
