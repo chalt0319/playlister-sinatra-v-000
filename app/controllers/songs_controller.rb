@@ -39,6 +39,7 @@ class SongsController < ApplicationController
 
   post '/songs/:slug' do
     @song = Song.find_by_slug(params[:slug])
+    binding.pry
     if @song.name != params[:name]
       @song.name = params[:name]
     end
