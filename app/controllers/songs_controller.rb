@@ -14,7 +14,7 @@ class SongsController < ApplicationController
     binding.pry
     if params[:artist_check]
       @artist = Artist.find(params[:artist_check])
-    if !Artist.find_by(name: params[:artist])
+    elsif !Artist.find_by(name: params[:artist])
       @artist = Artist.new(name: params[:artist])
     else
       @artist = Artist.find_by(name: params[:artist])
