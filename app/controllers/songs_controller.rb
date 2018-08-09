@@ -18,6 +18,8 @@ class SongsController < ApplicationController
     @song = Song.new(name: params[:name])
     if !Artist.find_by(name: params[:artist])
       @artist = Artist.new(name: params[:artist])
+    else
+      @artist = Artist.find_by(name: params[:artist])
     end
     @genre = Genre.new(name: params[:genre])
   end
