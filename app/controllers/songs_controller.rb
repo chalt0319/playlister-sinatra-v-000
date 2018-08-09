@@ -10,7 +10,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs/new' do
-    @song = Song.new(name: params[:name])
+    @song = Song.new(name: params[:song_name])
     if !Artist.find_by(name: params[:artist])
       @artist = Artist.new(name: params[:artist])
     else
