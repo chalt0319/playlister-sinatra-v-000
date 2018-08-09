@@ -16,7 +16,9 @@ class SongsController < ApplicationController
 
   post '/songs/new' do
     @song = Song.new(name: params[:name])
-    @artist = Artist.new(name: params[:artist])
+    if !Artist.find_by(name: params[:artist])
+      @artist = Artist.new(name: params[:artist])
+    end
     @genre = Genre.new(name: params[:genre])
   end
 end
