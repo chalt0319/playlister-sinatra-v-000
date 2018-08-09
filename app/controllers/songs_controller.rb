@@ -37,7 +37,7 @@ class SongsController < ApplicationController
     erb :'songs/edit'
   end
 
-  patch '/songs/:slug' do
+  post '/songs/:slug' do
     @song = Song.find_by_slug(params[:slug])
     if @song.name != params[:name]
       @song.name = params[:name]
