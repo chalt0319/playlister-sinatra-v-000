@@ -1,4 +1,4 @@
-<h1>Please enter the information you would like to change for: %<=@song.name%></h1>
+<h1>Please enter the information you would like to change for: <%=@song.name%></h1>
 
 <form action="/songs/<%=@song.slug%>/edit" method="post">
   <input type="hidden" name="_method" value="patch">
