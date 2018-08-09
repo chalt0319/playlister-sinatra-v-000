@@ -7,5 +7,5 @@
 <%@song.genres.each do |genre|%>
 <p><a href="/genres/<%=genre.slug%>"><%=genre.name%></a></p>
 <%end%>
-
+<br>
 <p><a href="/songs/<%=@song.slug%>/edit">Edit Song</a></p>
