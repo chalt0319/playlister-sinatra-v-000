@@ -57,7 +57,8 @@ class SongsController < ApplicationController
       else
         @genre = Genre.find_by(name: params[:genre])
       end
-      @songs.genres << @genre 
+      @song.genres = [] 
+      @song.genres << @genre
     end
     @song.save
     redirect "/songs/#{@song.slug}"
