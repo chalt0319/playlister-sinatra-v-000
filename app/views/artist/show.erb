@@ -1,11 +1,13 @@
 <h1><%=@artist.name%></h1>
 
+<h3>Songs:</h3>
 <%@artist.songs.each do |song|%>
 <ul>
   <li><%=song.name%></li>
 </ul>
 <%end%>
 
+<h3>Genres</h3>
 <%@artist.genres.each do |genre|%>
 <ul>
   <li><%=genre.name%></li>
